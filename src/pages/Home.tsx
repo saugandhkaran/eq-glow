@@ -4,9 +4,9 @@ import section_1_img from '../assets/images/homepage.png';
 import sun from '../assets/images/sun.svg';
 import { PackageCard } from '../components/PackageCard/PackageCard';
 import { TestimonialCard } from '../components/TestimonialCard/TestimonialCard';
-import Testimonial1 from '../assets/images/testimonial_1.jpg';
-import Testimonial2 from '../assets/images/testimonial_2.jpg';
-import Testimonial3 from '../assets/images/testimonial_3.jpg';
+import Testimonial1 from '../assets/images/testimonial_1.webp';
+import Testimonial2 from '../assets/images/testimonial_2.webp';
+import Testimonial3 from '../assets/images/testimonial_3.webp';
 
 
 const Home: React.FC = () => {
