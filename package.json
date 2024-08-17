@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npm rebuild node-sass"
   },
   "dependencies": {
     "bulma": "^0.9.4",
