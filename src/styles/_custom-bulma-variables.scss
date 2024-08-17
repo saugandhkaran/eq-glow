@@ -1,0 +1,22 @@
+// src/styles/_custom-bulma-variables.scss
+
+// Custom Colors
+$primary: #fdfdfd; // Custom Violet
+$black: #2c2c2c;  // Custom Black
+$white: #fdfdfd;  // Custom White
+$black-off: #595959;
+
+// Custom Variables to Override Bulma Defaults
+$link-color: $primary;
+$link-hover-color: darken($primary, 10%);
+$button-primary-background: $primary;
+$button-primary-text: $white;
+$button-primary-hover-background: lighten($primary, 10%);
+$button-primary-hover-text: $white;
+
+
+// Optionally, override other variables as needed
+$heading-color: $black;
+$text-color: $black;
+$border-color: $white;
+$background-color: $white;

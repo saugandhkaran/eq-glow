@@ -1,0 +1,29 @@
+// src/styles/_custom-header.scss
+@import '../../styles/_custom-bulma-variables';
+
+// Custom Header Styling
+.navbar {
+  border-radius: 50px; // Rounded edges
+  position: sticky; // Sticky positioning
+  top: 0; // Stick to the top of the viewport
+  z-index: 999; // Ensure it stays above other content
+  background-color: $primary !important; // Use custom violet for background
+  padding: 5px 10px; // Padding for spacing
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 10px;
+
+  // Styling for menu items
+  .navbar-item {
+    color: $white;
+    &:hover {
+      color: lighten($primary, 10%); // Change color on hover
+    }
+  }
+
+  // Active link styling
+  .is-active {
+    background-color: lighten($primary, 10%); // Highlight selected menu item
+    color: $white; // Ensure text remains visible
+  }
+}
