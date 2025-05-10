@@ -1,7 +1,17 @@
-
 // Import Bulma's variables and components
 @import "~bulma/sass/utilities/initial-variables.sass";
 @import "~bulma/sass/utilities/functions.sass";
 @import "~bulma/sass/utilities/derived-variables.sass";
 @import "~bulma/bulma.sass";
 @import '_custom-bulma-variables';
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-family: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+p, ol, ul, li {
+  font-size: 20px;
+}

@@ -8,7 +8,7 @@
   }
   .section-1 {
     padding-bottom: 0px;
-    background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-image: linear-gradient(to top, #8989ff, #75e884);
     h1, p {
       color: white
     }
@@ -19,9 +19,12 @@
   }
 
   .section-2 {
+    h1 {
+      color: #7c283b;
+    }
     color: $white;
     min-height: 100vh;
-    background-image: linear-gradient(to right, #d16ba5, #c56ab2, #b46bbf, #9d6dcb, #7f71d6, #6e73da, #5a75dd, #3e77e0, #3e77e0, #3e77e0, #3e77e0, #3e77e0);
+    background-color: #8989ff;
       .container {
         max-width: 1000px !important;
         margin: 0 auto;
@@ -30,7 +33,7 @@
 
   .section-3 {
     min-height: 100vh;
-    background-image: linear-gradient(to right, #ffffff, #efeaff, #e2d5ff, #d6bffe, #cda8fa, #e09bee, #f18edc, #ff81c7, #ff8ca0, #ffa979, #ffce60, #f0f468);
+    background-color: #8989ff;
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
@@ -68,7 +71,7 @@
 
   .section-4 {
     min-height: 100vh;
-    background-image: linear-gradient(to right, #5f51f7, #8c56f4, #ac5df1, #c767ee, #de72ec, #de72ec, #de72ec, #de72ec, #c767ee, #ac5df1, #8c56f4, #5f51f7);
+    background-image: linear-gradient(to bottom, #8989ff, #f697f1);
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
