@@ -2,6 +2,15 @@
 
 // Now you can use the $primary variable
 .home {
+  .button {
+    background-color: $primary;
+    color: $white;
+    border: transparent;
+    &:hover {
+      background-color: darken($primary, 10%);
+      color: $white;
+    }
+  }
   .title {
     color: $primary;
     font-size: 2rem;
@@ -9,31 +18,52 @@
   .section-1 {
     padding-bottom: 0px;
     background-image: linear-gradient(to top, #8989ff, #75e884);
+    min-height: 100vh;
     h1, p {
       color: white
     }
     h1 {
       padding-top: 70px;
     }
-    min-height: 100vh;
   }
 
   .section-2 {
+    color: $white;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #8989ff, #f697f1);
     h1 {
       color: #7c283b;
     }
-    color: $white;
-    min-height: 100vh;
-    background-color: #8989ff;
-      .container {
-        max-width: 1000px !important;
-        margin: 0 auto;
-      };
+    .container {
+      max-width: 1000px !important;
+      margin: 0 auto;
+    };
     }
 
   .section-3 {
     min-height: 100vh;
-    background-color: #8989ff;
+    background-image: linear-gradient(to top, #8989ff, #f697f1);
+    .background-image-yoga {
+      max-width: 300px;
+    }
+    .container {
+      max-width: 1000px !important;
+      margin: 0 auto;
+    };
+  }
+
+  .section-4 {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #8989ff, #f3f697);
+    .container {
+      max-width: 1000px !important;
+      margin: 0 auto;
+    }
+  }
+
+  .section-5 {
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #8989ff, #f3f697);
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
@@ -66,24 +96,6 @@
       .timeline {
         border-bottom: 1px solid $black;
       }
-    };
-  }
-
-  .section-4 {
-    min-height: 100vh;
-    background-image: linear-gradient(to bottom, #8989ff, #f697f1);
-    .container {
-      max-width: 1000px !important;
-      margin: 0 auto;
-    }
-  }
-
-  .section-5 {
-    min-height: 100vh;
-    background-color: #6e73da;
-    .container {
-      max-width: 1000px !important;
-      margin: 0 auto;
     }
   }
 }

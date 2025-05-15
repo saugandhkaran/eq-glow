@@ -6,12 +6,14 @@
 @import '_custom-bulma-variables';
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Goudy Bookletter 1911", serif;
-  font-family: 400;
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
-  letter-spacing: 2px;
 }
 
-p, ol, ul, li {
+p, button, ol, ul, li {
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
   font-size: 20px;
 }

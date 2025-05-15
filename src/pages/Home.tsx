@@ -7,15 +7,14 @@ import { TestimonialCard } from '../components/TestimonialCard/TestimonialCard';
 import Testimonial1 from '../assets/images/testimonial_1.webp';
 import Testimonial2 from '../assets/images/testimonial_2.webp';
 import Testimonial3 from '../assets/images/testimonial_3.webp';
+import Accordion from '../components/Accordion/Accordion';
+import background from './background_1.png';
 
 
 const Home: React.FC = () => {
   return (
     <>
       <div className="home">
-
-
-
         <div className="section section-1">
           <h4 className="title is-4 has-text-centered mb-1 has-text-black">THE FEEL COACH</h4>
           <div className="section has-text-centered mt-3">
@@ -24,10 +23,10 @@ const Home: React.FC = () => {
             <div className="columns is-centered mt-6">
               <div className="field has-addons">
                 <div className="control has-icons-right is-expanded">
-                  <input type="text" className="input is-info" placeholder="Enter your email" />
+                  <input type="text" className="input is-info is-medium" placeholder="Enter your email" />
                 </div>
                 <p className="control">
-                  <a className="button is-info" style={{'backgroundColor': '#8989ff'}}>Read for free</a>
+                  <a className="button is-medium">Read for free</a>
                 </p>
               </div>
             </div>
@@ -35,50 +34,41 @@ const Home: React.FC = () => {
         </div>
 
         <div className="section section-2">
-          {/* <h2 className="title is-2 has-text-centered mb-1">Choose your path</h2>
-          <div className="container mt-5">
-            <div className="columns">
-              <div className="column is-4">
-                <PackageCard title="EQ reset◆4 week"
-                  description="Start your journey of using the power of your emotional intelligence and build a strong inner foundation."
-                  img="https://fastly.picsum.photos/id/309/200/200.jpg?hmac=CV40Xz7anjWDJQgU2hAMvKhl5yWiUTCLTZqejhKkKs4" />
-              </div>
-              <div className="column is-4">
-                <PackageCard title="EQ Glow◆8 week"
-                  description="Our code program designed to transform your life."
-                  img="https://fastly.picsum.photos/id/309/200/200.jpg?hmac=CV40Xz7anjWDJQgU2hAMvKhl5yWiUTCLTZqejhKkKs4" />
-              </div>
-              <div className="column is-4">
-                <PackageCard title="1:1 session◆90 minutes"
-                  description="Work with me through a topic of your choice."
-                  img="https://fastly.picsum.photos/id/309/200/200.jpg?hmac=CV40Xz7anjWDJQgU2hAMvKhl5yWiUTCLTZqejhKkKs4" />
-              </div>
-            </div>
-          </div> */}
-          <h2></h2>
           <div className='container mt-6'>
             <div className='columns'>
-              <div className='column is-9'>
-                <h1 className='title is-1'>Open for deep feelers & empaths
-                who want to develop resilience.</h1>
-                <div>
-                  <p className='has-text-white mt-6'>In this program you will:
-                  </p>
-                  <br />
-                  <ol className='has-text-white'>
-                    <li className='has-text-white'>Learn how to use your emotional intelligence to your advantage</li>
-                    <li className='has-text-white'>Learn how to build a strong inner foundation</li>
-                    <li className='has-text-white'>Learn how to transform your life</li>
-                    <li className='has-text-white'>Learn how to work with your emotions</li>
-                  </ol>
-                </div>
+              <div className='column is-7'>
+                <h3 className='title is-3'>Open for deep feelers & empaths
+                  who want to develop resilience.</h3>
+              </div>
+              <div className='column is-3'></div>
+              <div className='column is-2'>
+                <button className='button is-medium' >I am ready</button>
               </div>
             </div>
-          </div> 
+          </div>
+        </div>
+        <div className='section section-3'>
+          <div className='container'>
+            <h2 className='title is-2'>Emotional Intelligence Basics</h2>
+            <div className='columns is-space-between'>
+            <div className='column is-6'>
+              <Accordion />
+            </div>
+            <div className='column is-1'></div>
+            <div className='column is-5'>
+                <div className='has-text-centered has-text-white'>
+                  <img src={background} alt='background' className='background-image-yoga' />
+                <p>I help you meet your hidden and also your clearly noticeable needs, 
+optimize your emotional world, 
+and build a healthy relationship with your mind and body.</p>
+                </div>
+            </div>
+            </div>
+          </div>
         </div>
 
-        <div className="section section-3">
-          <h2 className="title is-2 has-text-centered has-text-black mb-1">The EQ Glow journey</h2>
+        <div className="section section-4">
+          <h2 className="title is-2 has-text-centered mb-1">The EQ Glow journey</h2>
           <div className="container mt-6">
             <div className='columns'>
               <div className='column is-3'>
@@ -150,7 +140,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="section section-4">
+        <div className="section section-5">
           <h2 className="title is-2 has-text-centered has-text-black mb-1">Testimonials</h2>
           <div className="container mt-6">
             <div className="columns">
@@ -179,7 +169,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="section section-5">
+        <div className="section section-6">
           <div className="container">
             <div className="columns">
               <div className="column is-6">
