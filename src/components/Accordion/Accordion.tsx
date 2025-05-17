@@ -40,7 +40,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, isActive,
   return (
     <div className="accordion">
       <div
-        className={`accordion-header is-clickable is-flex is-justify-content-space-between is-align-items-center py-2 px-3`}
+        className={`accordion-header is-clickable is-flex is-justify-content-space-between is-align-items-center py-4 px-3`}
         onClick={onClick}
       >
         <p className="has-text-weight-semibold">{title}</p>

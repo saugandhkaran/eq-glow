@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.scss';
 import section_1_img from '../assets/images/homepage.png';
-import sun from '../assets/images/sun.svg';
+import sun from '../assets/images/sun.png';
 import { PackageCard } from '../components/PackageCard/PackageCard';
 import { TestimonialCard } from '../components/TestimonialCard/TestimonialCard';
 import Testimonial1 from '../assets/images/testimonial_1.webp';
@@ -51,57 +51,82 @@ const Home: React.FC = () => {
           <div className='container'>
             <h2 className='title is-2'>Emotional Intelligence Basics</h2>
             <div className='columns is-space-between'>
-            <div className='column is-6'>
-              <Accordion />
-            </div>
-            <div className='column is-1'></div>
-            <div className='column is-5'>
+              <div className='column is-6'>
+                <Accordion />
+              </div>
+              <div className='column is-1'></div>
+              <div className='column is-5'>
                 <div className='has-text-centered has-text-white'>
                   <img src={background} alt='background' className='background-image-yoga' />
-                <p>I help you meet your hidden and also your clearly noticeable needs, 
-optimize your emotional world, 
-and build a healthy relationship with your mind and body.</p>
+                  <p>I help you meet your hidden and also your clearly noticeable needs,
+                    optimize your emotional world,
+                    and build a healthy relationship with your mind and body.</p>
                 </div>
-            </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="section section-4">
-          <h2 className="title is-2 has-text-centered mb-1">The EQ Glow journey</h2>
-          <div className="container mt-6">
-            <div className='columns'>
-              <div className='column is-3'>
-                <h4 className="title has-text-black is-4">EQ Reset <br />(2 Weeks)</h4>
-                <div className="sun-border">
-                  <img src={sun} />
-                  <hr />
+          <div className='container'>
+            <h2 className="title is-2 mb-1">The EMOTION - FLOW journey</h2>
+            <h2 className='title is-4 mb-1'>Designed to get best results</h2>
+            <div className="container mt-6">
+              <div className='columns'>
+                <div className='column is-3'>
+                  <div className="card"
+                    style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
+                    <div className="card-content">
+                      <p className="title is-5">EQ <br />FEEL RESET <br /><span className='tag is-info is-light'>2 Weeks</span></p>
+                      <div>
+                        <p className='has-text-black p-1 features features'>Learn the basics of emotional awareness</p>
+                        <p className='has-text-black p-1 features'>Get to know your life patterns & triggers</p>
+                        <p className='has-text-black p-1 features'>Clarify goals, circumstances and necessary steps</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p>check-in & reflect on old patterns, your goals & circumstances</p>
-              </div>
-              <div className='column is-3'>
-                <h4 className="title is-4 has-text-black">EQ Foundations <br />(2 Weeks)</h4>
-                <div className="sun-border">
-                  <img src={sun} />
-                  <hr />
+                <div className='column is-3'>
+                  <div className="card"
+                    style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
+                    <div className="card-content">
+                      <p className="title is-5">EQ <br />FOUNDATIONS <br /><span className='tag is-info is-light'>2 Weeks</span></p>
+                      <div>
+                        <p className='has-text-black p-1 features'>Feel Reset +</p>
+                        <p className='has-text-black p-1 features'>Build strong mental & emotional foundations</p>
+                        <p className='has-text-black p-1 features'>learn techniques to increase emotional stability (grounding, mindfulness, self regulation, reflection)</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p>Start to build a mental & emotional base within</p>
-              </div>
-              <div className='column is-3'>
-                <h4 className="title is-4 has-text-black">EQ Shift<br /> (2 Weeks)</h4>
-                <div className="sun-border">
-                  <img src={sun} />
-                  <hr />
+                <div className='column is-3'>
+                  <div className="card"
+                    style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
+                    <div className="card-content">
+                      <p className="title is-5">EQ <br />SHIFT<br /><span className='tag is-info is-light'>2 Weeks</span></p>
+                      <div>
+                        <p className='has-text-black p-1 features'>Feel Reset + Foundations</p>
+                        <p className='has-text-black p-1 features'>Transformative EQ sessions</p>
+                        <p className='has-text-black p-1 features'>Mindset work</p>
+                        <p className='has-text-black p-1 features'>Deepen the basics</p>
+                        <p className='has-text-black p-1 features'>Learn advanced EQ.glow techniques (behaviour change, old pattern transformation, stabilisation techniques)</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p>Learn the tools to transform old patterns</p>
-              </div>
-              <div className='column is-3'>
-                <h4 className="title is-4 has-text-black">EQ Glow <br /> (2 Weeks)</h4>
-                <div className="sun-border">
-                  <img src={sun} />
-                  <hr />
+                <div className='column is-3'>
+                  <div className="card"
+                    style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
+                    <div className="card-content">
+                      <p className="title is-5">EQ <br />INTEGRATION<br /><span className='tag is-info is-light'>2 Weeks</span></p>
+                      <div>
+                        <p className='has-text-black p-1 features'>Feel Reset Included</p>
+                        <p className='has-text-black p-1 features'>Learn the basics of emotional awareness</p>
+                        <p className='has-text-black p-1 features'>Learn the basics of emotional awareness</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p>Work with the techniques and activate your EQ glow</p>
               </div>
             </div>
 

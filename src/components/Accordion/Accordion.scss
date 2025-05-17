@@ -1,10 +1,12 @@
 .accordion {
-  border-radius: 5px;
   margin: 10px 0;
 }
 
 .accordion-header {
-  background-color: #d7d6d641;
+  border-radius: 50px;
+  background-color: #27749a;
+  padding: 20px 60px;
+  color: white;
 }
 .accordion-content {
   max-height: 0;

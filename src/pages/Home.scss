@@ -17,7 +17,7 @@
   }
   .section-1 {
     padding-bottom: 0px;
-    background-image: linear-gradient(to top, #8989ff, #75e884);
+    background: linear-gradient(to top, #8989ff, #75e884);
     min-height: 100vh;
     h1, p {
       color: white
@@ -58,6 +58,19 @@
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
+    }
+    .card {
+      background-color: #f4f4f48f;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.05);
+      }
+      .features {
+        border-bottom: 1px solid $primary;
+      }
+      
     }
   }
 
