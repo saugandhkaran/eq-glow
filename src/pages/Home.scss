@@ -111,4 +111,20 @@
       }
     }
   }
+
+  .section-6 {
+    padding-bottom: 0px;
+    background: linear-gradient(to top, #f5a87b, #8989ff);
+    min-height: 100vh;
+    .container {
+      max-width: 1000px !important;
+      margin: 0 auto;
+    };
+    h1, p {
+      color: white
+    }
+    h1 {
+      padding-top: 70px;
+    }
+  }
 }

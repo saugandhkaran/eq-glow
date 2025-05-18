@@ -47,6 +47,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
+
         <div className='section section-3'>
           <div className='container'>
             <h2 className='title is-2'>Emotional Intelligence Basics</h2>
@@ -166,29 +167,31 @@ const Home: React.FC = () => {
         </div>
 
         <div className="section section-5">
-          <h2 className="title is-2 has-text-centered has-text-black mb-1">Testimonials</h2>
-          <div className="container mt-6">
-            <div className="columns">
-              <div className="column is-4">
-                <TestimonialCard
-                  description="I am so grateful for the work we did together. I feel like I am finally in control of my life and my emotions."
-                  author="Someone"
-                  additional_info="Wonderful GmbH"
-                  testimonial_image={Testimonial1} />
-              </div>
-              <div className="column is-4">
-                <TestimonialCard
-                  description="I am so grateful for the work we did together. I feel like I am finally in control of my life and my emotions."
-                  author="Someone"
-                  additional_info="Wonderful GmbH"
-                  testimonial_image={Testimonial2} />
-              </div>
-              <div className="column is-4">
-                <TestimonialCard
-                  description="I am so grateful for the work we did together. I feel like I am finally in control of my life and my emotions."
-                  author="Someone"
-                  additional_info="Wonderful GmbH"
-                  testimonial_image={Testimonial3} />
+          <div className='container'>
+            <h2 className="title is-2 mb-1">Testimonials</h2>
+            <div className="container mt-6">
+              <div className="columns">
+                <div className="column is-4">
+                  <TestimonialCard
+                    description="I am so grateful for the work we did together. I feel like I am finally in control of my life and my emotions."
+                    author="Someone"
+                    additional_info="Wonderful GmbH"
+                    testimonial_image={Testimonial1} />
+                </div>
+                <div className="column is-4">
+                  <TestimonialCard
+                    description="I am so grateful for the work we did together. I feel like I am finally in control of my life and my emotions."
+                    author="Someone"
+                    additional_info="Wonderful GmbH"
+                    testimonial_image={Testimonial2} />
+                </div>
+                <div className="column is-4">
+                  <TestimonialCard
+                    description="I am so grateful for the work we did together. I feel like I am finally in control of my life and my emotions."
+                    author="Someone"
+                    additional_info="Wonderful GmbH"
+                    testimonial_image={Testimonial3} />
+                </div>
               </div>
             </div>
           </div>
@@ -196,36 +199,29 @@ const Home: React.FC = () => {
 
         <div className="section section-6">
           <div className="container">
-            <div className="columns">
-              <div className="column is-6">
-                <h2 className='title is-2'>We are looking for empaths, health and wellness practitioners</h2>
-                <p className='has-text-white mt-6'>Our mission is to change the face of humanity changing our inner system, reprogramming mindsets
-                  and healing with emotional intelligence, we empower humans to step up for themselves.
-                </p>
-                <br />
-                <p className='has-text-white'>All of out servives are grounded in 10+ years of experience. The techniques trached have changed thousands of lives already.</p>
-                <br />
-                <p className='has-text-white'>We know that healing is not linear. The process of change has very unique individual circumstances.</p>
-                <br />
-                <button className='button is-white' style={{ width: '100%' }}>Join us</button>
+            <h2 className="title is-2 mb-1">Frequently Asked Questions</h2>
+          </div>
+          <div className='container mt-6'>
+            <div className='columns'>
+              <div className='column is-6'>
+                <h4 className='title is-4'>Do I need prior experience in emotional work or coaching?</h4>
+                <p className='mb-4'>No, but you should be committed to giving your best during the coaching period to achieve the best results for yourself. This includes determination, courage for self-exploration, and dedication.</p>
+                <h4 className='title is-4'>I often feel overwhelmed by my emotions—does that mean this workshop isn’t right for me?</h4>
+                <p className='mb-4'>Quite the opposite. If emotional overwhelm is one of your main challenges, this workshop will provide you with a safe space to work through it. You’ll learn how to handle strong emotions effectively.</p>
+                <h4 className='title is-4'>How is your approach different from traditional therapy or coaching?</h4>
+                <p className='mb-4'>My approach integrates aspects of traditional cognitive-behavioral therapy and mindset coaching but expands on them with techniques from emotional intelligence, psychosomatics, and inner child work.</p>
               </div>
-              <div className="column is-6">
-
+              <div className='column is-6'>
+                <h4 className='title is-4'>How much time should I set aside each week?</h4>
+                <p className='mb-4'> I estimate a weekly commitment of 3 hours: 1 hour for our 1:1 session, 1 hour for reflection exercises, and approximately 70 minutes of practice (10 minutes per day). Additionally, at the beginning and end of the coaching program, there will be a 2-hour emotion-focused session</p>
+                <h4 className='title is-4'>What if I realize during the workshop that it feels too intense for me?</h4>
+                <p className='mb-4'>We will adjust the coaching to your pace and personal preferences. If you still find the process too intense, we can pause anytime and continue after a month if needed.</p>
+                <h4 className='title is-4'> Can I continue working with you after the workshop?</h4>
+                <p className='mb-4'>Absolutely! You’ll have the option to continue with six additional weeks or individual sessions. I’m also planning group seminars and advanced courses.</p>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="section section-6">
-
-        </div>
-
-        <div className="section section-7">
-
-        </div>
-
-
-
       </div>
     </>
   );
