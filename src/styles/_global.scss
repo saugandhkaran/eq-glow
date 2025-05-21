@@ -15,4 +15,16 @@ h1, h2, h3, h4, h5, h6 {
 p, button, ol, ul, li {
   font-family: "Domine", serif;
   font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
+
+.button {
+    background-color: $primary !important;
+    color: $white !important;
+    border: transparent;
+    &:hover {
+      background-color: darken($primary, 10%);
+      color: $white;
+    }
+  }

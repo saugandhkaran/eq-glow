@@ -1,15 +1,16 @@
 import React from 'react';
 import './Home.scss';
-import section_1_img from '../assets/images/homepage.png';
 import sun from '../assets/images/sun.png';
-import { PackageCard } from '../components/PackageCard/PackageCard';
 import { TestimonialCard } from '../components/TestimonialCard/TestimonialCard';
 import Testimonial1 from '../assets/images/testimonial_1.webp';
 import Testimonial2 from '../assets/images/testimonial_2.webp';
 import Testimonial3 from '../assets/images/testimonial_3.webp';
 import Accordion from '../components/Accordion/Accordion';
 import background from './background_1.png';
-
+import * as eiBasics from '../assets/content/emotional-intelligence-basics.json';
+import * as faq1 from '../assets/content/faq-1.json';
+import * as faq2 from '../assets/content/faq-2.json';
+import { AboutMe } from '../components/AboutMe/AboutMe';
 
 const Home: React.FC = () => {
   return (
@@ -37,7 +38,7 @@ const Home: React.FC = () => {
           <div className='container mt-6'>
             <div className='columns'>
               <div className='column is-7'>
-                <h3 className='title is-3'>Open for deep feelers & empaths
+                <h3 className='title is-3 has-text-white'>Open for deep feelers & empaths
                   who want to develop resilience.</h3>
               </div>
               <div className='column is-3'></div>
@@ -53,13 +54,13 @@ const Home: React.FC = () => {
             <h2 className='title is-2'>Emotional Intelligence Basics</h2>
             <div className='columns is-space-between'>
               <div className='column is-6'>
-                <Accordion />
+                { Accordion(eiBasics.content) } 
               </div>
               <div className='column is-1'></div>
               <div className='column is-5'>
                 <div className='has-text-centered has-text-white'>
                   <img src={background} alt='background' className='background-image-yoga' />
-                  <p>I help you meet your hidden and also your clearly noticeable needs,
+                  <p className='has-text-weight-bold'>I help you meet your hidden and also your clearly noticeable needs,
                     optimize your emotional world,
                     and build a healthy relationship with your mind and body.</p>
                 </div>
@@ -70,15 +71,15 @@ const Home: React.FC = () => {
 
         <div className="section section-4">
           <div className='container'>
-            <h2 className="title is-2 mb-1">The EMOTION - FLOW journey</h2>
-            <h2 className='title is-4 mb-1'>Designed to get best results</h2>
+            <h2 className="title is-2 mb-1 has-text-white">The EMOTION - FLOW journey</h2>
+            <h2 className='title is-4 mb-1 has-text-white'>Designed to get best results</h2>
             <div className="container mt-6">
               <div className='columns'>
                 <div className='column is-3'>
                   <div className="card"
                     style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
                     <div className="card-content">
-                      <p className="title is-5">EQ <br />FEEL RESET <br /><span className='tag is-info is-light'>2 Weeks</span></p>
+                      <h5 className="title is-5">EQ <br />FEEL RESET <br /><p className='tag is-info is-light has-text-weight-semibold'>2 Weeks</p></h5>
                       <div>
                         <p className='has-text-black p-1 features features'>Learn the basics of emotional awareness</p>
                         <p className='has-text-black p-1 features'>Get to know your life patterns & triggers</p>
@@ -91,7 +92,7 @@ const Home: React.FC = () => {
                   <div className="card"
                     style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
                     <div className="card-content">
-                      <p className="title is-5">EQ <br />FOUNDATIONS <br /><span className='tag is-info is-light'>2 Weeks</span></p>
+                      <h5 className="title is-5">EQ <br />FOUNDATIONS <br /><p className='tag is-info is-light has-text-weight-semibold'>2 Weeks</p></h5>
                       <div>
                         <p className='has-text-black p-1 features'>Feel Reset +</p>
                         <p className='has-text-black p-1 features'>Build strong mental & emotional foundations</p>
@@ -104,7 +105,7 @@ const Home: React.FC = () => {
                   <div className="card"
                     style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
                     <div className="card-content">
-                      <p className="title is-5">EQ <br />SHIFT<br /><span className='tag is-info is-light'>2 Weeks</span></p>
+                      <h5 className="title is-5">EQ <br />SHIFT<br /><p className='tag is-info is-light has-text-weight-semibold'>2 Weeks</p></h5>
                       <div>
                         <p className='has-text-black p-1 features'>Feel Reset + Foundations</p>
                         <p className='has-text-black p-1 features'>Transformative EQ sessions</p>
@@ -119,7 +120,7 @@ const Home: React.FC = () => {
                   <div className="card"
                     style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
                     <div className="card-content">
-                      <p className="title is-5">EQ <br />INTEGRATION<br /><span className='tag is-info is-light'>2 Weeks</span></p>
+                      <h5 className="title is-5">EQ <br />INTEGRATION<br /><p className='tag is-info is-light has-text-weight-semibold'>2 Weeks</p></h5>
                       <div>
                         <p className='has-text-black p-1 features'>Feel Reset Included</p>
                         <p className='has-text-black p-1 features'>Learn the basics of emotional awareness</p>
@@ -199,29 +200,38 @@ const Home: React.FC = () => {
 
         <div className="section section-6">
           <div className="container">
-            <h2 className="title is-2 mb-1">Frequently Asked Questions</h2>
+            <h2 className="title is-2 mb-1 has-text-white">Frequently Asked Questions</h2>
           </div>
           <div className='container mt-6'>
             <div className='columns'>
               <div className='column is-6'>
-                <h4 className='title is-4'>Do I need prior experience in emotional work or coaching?</h4>
-                <p className='mb-4'>No, but you should be committed to giving your best during the coaching period to achieve the best results for yourself. This includes determination, courage for self-exploration, and dedication.</p>
-                <h4 className='title is-4'>I often feel overwhelmed by my emotions—does that mean this workshop isn’t right for me?</h4>
-                <p className='mb-4'>Quite the opposite. If emotional overwhelm is one of your main challenges, this workshop will provide you with a safe space to work through it. You’ll learn how to handle strong emotions effectively.</p>
-                <h4 className='title is-4'>How is your approach different from traditional therapy or coaching?</h4>
-                <p className='mb-4'>My approach integrates aspects of traditional cognitive-behavioral therapy and mindset coaching but expands on them with techniques from emotional intelligence, psychosomatics, and inner child work.</p>
+                { Accordion(faq1.content) }
               </div>
               <div className='column is-6'>
-                <h4 className='title is-4'>How much time should I set aside each week?</h4>
-                <p className='mb-4'> I estimate a weekly commitment of 3 hours: 1 hour for our 1:1 session, 1 hour for reflection exercises, and approximately 70 minutes of practice (10 minutes per day). Additionally, at the beginning and end of the coaching program, there will be a 2-hour emotion-focused session</p>
-                <h4 className='title is-4'>What if I realize during the workshop that it feels too intense for me?</h4>
-                <p className='mb-4'>We will adjust the coaching to your pace and personal preferences. If you still find the process too intense, we can pause anytime and continue after a month if needed.</p>
-                <h4 className='title is-4'> Can I continue working with you after the workshop?</h4>
-                <p className='mb-4'>Absolutely! You’ll have the option to continue with six additional weeks or individual sessions. I’m also planning group seminars and advanced courses.</p>
+                { Accordion(faq2.content) }
               </div>
             </div>
           </div>
         </div>
+
+        <div className='section section-7'>
+          <div className='container'>
+            <h2 className='title is-2 mb-1'>About Me</h2>
+            <div className='container mt-6'>
+            <div className='columns'>
+              <div className='column is-6'>
+                {AboutMe({
+                  description: "I am so grateful for the work we did together. I feel like I am finally in control of my life and my emotions.",
+                  name: "Jana Isabella Söller",
+                })}
+              </div>
+              <div className='column is-6'>
+
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
       </div>
     </>
   );

@@ -1,34 +1,6 @@
 import React, { useState } from "react";
 import "./Accordion.scss"; // custom styles for sliding
 
-const accordionData = [
-  {
-    title: "1. Understand and Name Your Emotions",
-    content:
-      "Emotional intelligence begins with self-awareness — recognizing what you feel, naming it clearly, and allowing yourself to fully experience those emotions.",
-  },
-  {
-    title: "2. Respond Mindfully, Not Reactively",
-    content:
-      "By practicing emotional intelligence, you gain the ability to stay grounded and resilient, even in challenging moments. It helps you process intense feelings without losing control.",
-  },
-  {
-    title: "3. Unprocessed Emotions Build Up Over Time",
-    content:
-      "Many of us carry emotional baggage from childhood or life experiences. Without proper tools, these emotions accumulate and create inner blockages.",
-  },
-  {
-    title: "4. Emotions Influence Thoughts, Feelings, and Behavior",
-    content:
-      "Unprocessed emotions can show up as destructive habits, harmful self-talk, emotional overwhelm, tension, or a sense of emptiness.",
-  },
-  {
-    title: "5. Emotional Intelligence is Trainable",
-    content:
-      "This is a skill anyone can develop with structure, consistency, and practice. It empowers better decisions, deeper connections, and a more balanced inner state.",
-  },
-];
-
 interface AccordionItemProps {
   title: string;
   content: string;
@@ -43,21 +15,27 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, isActive,
         className={`accordion-header is-clickable is-flex is-justify-content-space-between is-align-items-center py-4 px-3`}
         onClick={onClick}
       >
-        <p className="has-text-weight-semibold">{title}</p>
-        <span>{isActive ? "▲" : "▼"}</span>
+        <h3 className="title mb-0 is-5 has-text-white">{title}</h3>
+        <span className={`title is-4 has-text-white ${isActive ? "rotate-left" : "rotate-top"}`}>➤</span>
       </div>
       <div className={`accordion-content ${isActive ? "open" : ""}`}>
-        <p className="mt-2 has-text-white">{content}</p>
+        <p className="mt-2 mb-4 has-text-weight-medium has-text-white">{content}</p>
       </div>
     </div>
   );
 };
 
-const Accordion = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+export interface AccordionDataProps {
+  title: string;
+  content: string;
+}
+
+const Accordion = (accordionInput: AccordionDataProps[]) => {
+  const [activeIndex, setActiveIndex] = useState(-1);
+  const accordionData = accordionInput;
 
   const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? 0 : index);
+    setActiveIndex(activeIndex === index ? -1 : index);
   };
 
   return (

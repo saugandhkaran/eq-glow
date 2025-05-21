@@ -1,8 +1,19 @@
 .testimonial-card {
   max-width: 300px !important;
+  background-color: #27749a5b !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 0px solid white !important;
+  color: white !important;
+    img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+  }
   .card-content {
     background-color: transparent !important;
-    border: 1px solid white;
-    color: white;
+  }
+  .quote-image {
+    width: 40px;
+    height: 40px;
   }
 }
