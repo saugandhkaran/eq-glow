@@ -1,5 +1,6 @@
 @import "../styles/_global.scss";
 
+
 // Now you can use the $primary variable
 .home {
   max-width: 1000px !important;
@@ -10,44 +11,45 @@
   }
   .section-1 {
     padding-bottom: 0px;
-    background: linear-gradient(to top, #8989ff, #75e884);
+    background: linear-gradient(to top, #8989ff5e, #82d8ca), url(https://grainy-gradients.vercel.app/noise.svg);
     min-height: 100vh;
-    h1, p {
-      color: white
+    h1,
+    p {
+      color: white;
     }
-    h1 {
-      padding-top: 70px;
+    h3 {
+      color: $white;
     }
   }
 
   .section-2 {
     color: $white;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, #8989ff, #f697f1);
+    background-image: linear-gradient(to bottom, #8989ff5e, #eb5f7b79), url(https://grainy-gradients.vercel.app/noise.svg);
     h1 {
       color: #7c283b;
     }
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
-    };
     }
+  }
 
   .section-3 {
     min-height: 100vh;
-    background-image: linear-gradient(to top, #8989ff, #f697f1);
+    background-image: linear-gradient(to top, #4da59c78, #eb5f7b79), url(https://grainy-gradients.vercel.app/noise.svg);
     .background-image-yoga {
       max-width: 300px;
     }
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
-    };
+    }
   }
 
   .section-4 {
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, #8989ff, #f3f697);
+    background-image: linear-gradient(to bottom, #4da59c78, #eb5f7b79), url(https://grainy-gradients.vercel.app/noise.svg);;
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
@@ -63,13 +65,12 @@
       .features {
         border-bottom: 1px solid $primary;
       }
-      
     }
   }
 
   .section-5 {
     min-height: 100vh;
-    background-image: linear-gradient(to top, #8989ff, #f3f697);
+    background-image: linear-gradient(to top, #ccd4fb60, #eb5f7b79), url(https://grainy-gradients.vercel.app/noise.svg);;
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
@@ -84,7 +85,7 @@
         }
       }
       .eq-reset-timeline {
-       .timeline:first-child {
+        .timeline:first-child {
           border-left: 1px solid black;
         }
         .timeline:last-child {
@@ -93,12 +94,12 @@
       }
       .eq-glow-timeline {
         .timeline:first-child {
-           border-left: 1px solid black;
-         }
-         .timeline:last-child {
-           border-right: 1px solid black;
-         }
-       }
+          border-left: 1px solid black;
+        }
+        .timeline:last-child {
+          border-right: 1px solid black;
+        }
+      }
       .timeline {
         border-bottom: 1px solid $black;
       }
@@ -107,29 +108,56 @@
 
   .section-6 {
     padding-bottom: 0px;
-    background: linear-gradient(to top, #f5a87b, #8989ff);
+    background: linear-gradient(to top, #f5a87b82, #ccd4fb60), url(https://grainy-gradients.vercel.app/noise.svg);
     min-height: 100vh;
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
-    };
-    h1, p {
-      color: white
+    }
+    h1,
+    p {
+      color: white;
     }
     h1 {
       padding-top: 70px;
     }
   }
-    .section-7 {
+  .section-7 {
     padding-bottom: 0px;
-    background: linear-gradient(to top, #8989ff, #f5a87b);
+    background: linear-gradient(to top, #8989ff72, #f5a87b82), url(https://grainy-gradients.vercel.app/noise.svg);;
     min-height: 100vh;
     .container {
       max-width: 1000px !important;
       margin: 0 auto;
-    };
-    h1, p {
-      color: white
+    }
+    h1,
+    p {
+      color: white;
+    }
+    h1 {
+      padding-top: 70px;
+    }
+  }
+
+  .section-8 {
+    padding: 0px;
+    background: linear-gradient(to top, #8989ff72, #f5a87b82), url(https://grainy-gradients.vercel.app/noise.svg);
+    min-height: 100vh;
+    .container {
+      max-width: 1000px !important;
+      margin: 0 auto;
+    }
+    .image-hero {
+      height: 70vh;
+      width: 100%;
+    }
+    .connect-section {
+      background-color: $primary;
+      height: 30vh;
+    }
+    h1,
+    p {
+      color: white;
     }
     h1 {
       padding-top: 70px;

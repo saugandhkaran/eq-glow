@@ -6,7 +6,8 @@ import Testimonial1 from '../assets/images/testimonial_1.webp';
 import Testimonial2 from '../assets/images/testimonial_2.webp';
 import Testimonial3 from '../assets/images/testimonial_3.webp';
 import Accordion from '../components/Accordion/Accordion';
-import background from './background_1.png';
+import background from '../assets/images/background_1.png';
+import HeroImage from '../assets/images/homepage.jpg';
 import * as eiBasics from '../assets/content/emotional-intelligence-basics.json';
 import * as faq1 from '../assets/content/faq-1.json';
 import * as faq2 from '../assets/content/faq-2.json';
@@ -16,11 +17,11 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="home">
-        <div className="section section-1">
-          <h4 className="title is-4 has-text-centered mb-1 has-text-black">THE FEEL COACH</h4>
+        <div className="section section-1" style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <h1 className="title is-1 has-text-centered mb-1 has-text-white brand">the feel coach</h1>
           <div className="section has-text-centered mt-3">
-            <h1 className="title is-1">Develop <br /> emotional <br /> stability</h1>
-            <h3 className="subtitle is-3 has-text-white">From overwhelmed <br /> to confident</h3>
+            <h1 className="title is-1 pt-6">Develop <br /> emotional <br /> stability</h1>
+            <h3 className="subtitle is-3">From overwhelmed <br /> to confident</h3>
             <div className="columns is-centered mt-6">
               <div className="field has-addons">
                 <div className="control has-icons-right is-expanded">
@@ -31,6 +32,8 @@ const Home: React.FC = () => {
                 </p>
               </div>
             </div>
+            <p className='is-size-7'>Photo by <a href="https://unsplash.com/@jblesly?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lesly Juarez</a> on <a href="https://unsplash.com/photos/long-black-haired-woman-smiling-close-up-photography-1AhGNGKuhR0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      </p>
           </div>
         </div>
 
@@ -38,7 +41,7 @@ const Home: React.FC = () => {
           <div className='container mt-6'>
             <div className='columns'>
               <div className='column is-7'>
-                <h3 className='title is-3 has-text-white'>Open for deep feelers & empaths
+                <h3 className='title is-3'>Open for deep feelers & empaths
                   who want to develop resilience.</h3>
               </div>
               <div className='column is-3'></div>
@@ -54,7 +57,7 @@ const Home: React.FC = () => {
             <h2 className='title is-2'>Emotional Intelligence Basics</h2>
             <div className='columns is-space-between'>
               <div className='column is-6'>
-                { Accordion(eiBasics.content) } 
+                {Accordion(eiBasics.content)}
               </div>
               <div className='column is-1'></div>
               <div className='column is-5'>
@@ -71,8 +74,8 @@ const Home: React.FC = () => {
 
         <div className="section section-4">
           <div className='container'>
-            <h2 className="title is-2 mb-1 has-text-white">The EMOTION - FLOW journey</h2>
-            <h2 className='title is-4 mb-1 has-text-white'>Designed to get best results</h2>
+            <h2 className="title is-2 mb-1 ">The EMOTION - FLOW journey</h2>
+            <h2 className='title is-4 mb-1 '>Designed to get best results</h2>
             <div className="container mt-6">
               <div className='columns'>
                 <div className='column is-3'>
@@ -200,15 +203,15 @@ const Home: React.FC = () => {
 
         <div className="section section-6">
           <div className="container">
-            <h2 className="title is-2 mb-1 has-text-white">Frequently Asked Questions</h2>
+            <h2 className="title is-2 mb-1">Frequently Asked Questions</h2>
           </div>
           <div className='container mt-6'>
             <div className='columns'>
               <div className='column is-6'>
-                { Accordion(faq1.content) }
+                {Accordion(faq1.content)}
               </div>
               <div className='column is-6'>
-                { Accordion(faq2.content) }
+                {Accordion(faq2.content)}
               </div>
             </div>
           </div>
@@ -218,20 +221,45 @@ const Home: React.FC = () => {
           <div className='container'>
             <h2 className='title is-2 mb-1'>About Me</h2>
             <div className='container mt-6'>
-            <div className='columns'>
-              <div className='column is-6'>
-                {AboutMe({
-                  description: "I am so grateful for the work we did together. I feel like I am finally in control of my life and my emotions.",
-                  name: "Jana Isabella Söller",
-                })}
-              </div>
-              <div className='column is-6'>
+              <div className='columns'>
+                <div className='column is-6'>
+                  {AboutMe({
+                    description: "I am so grateful for the work we did together. I feel like I am finally in control of my life and my emotions.",
+                    name: "Jana Isabella Söller",
+                  })}
+                </div>
+                <div className='column is-6'>
 
+                </div>
               </div>
-            </div>
             </div>
           </div>
-      </div>
+        </div>
+
+        <div className='section section-8'>
+          <div className='container'>
+            <div className="image-hero">
+              <img src={sun} alt="Sun" className="hero-image" style={{ maxHeight: '20px' }} />
+            </div>
+            <div className='connect-section p-5'>
+              <div className="columns">
+                <div className="column is-12">
+                  <h2 className="title is-2 has-text-centered has-text-white">Book a session & start exploring your emotions.</h2>
+                </div>
+              </div>
+              <div className='columns p-5'>
+                <div className='column is-6'>
+                  <p>Location: online & in person <br/>
+                    (I’m currently in Berlin, Germany)</p>
+                </div>
+                <div className='column is-6'>
+                  <p>Contact me directly: <br/>
+                    emotion.soeller@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
