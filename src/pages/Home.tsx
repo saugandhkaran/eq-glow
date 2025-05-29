@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.scss';
 import sun from '../assets/images/sun.png';
 import { TestimonialCard } from '../components/TestimonialCard/TestimonialCard';
@@ -12,12 +12,68 @@ import * as eiBasics from '../assets/content/emotional-intelligence-basics.json'
 import * as faq1 from '../assets/content/faq-1.json';
 import * as faq2 from '../assets/content/faq-2.json';
 import { AboutMe } from '../components/AboutMe/AboutMe';
+import NavigationHeader from '../components/NavigationHeader/NavigationHeader';
 
 const Home: React.FC = () => {
+  const [showNav, setShowNav] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if scrolled past 150vh
+      const scrollPosition = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      setShowNav(scrollPosition > viewportHeight * 0.8);
+      
+      // Show scroll to top button when scrolled down
+      setShowScrollTop(scrollPosition > viewportHeight);
+      
+      // Determine which section is currently in view
+      const sections = ['home', 'about', 'basics', 'eq-journey', 'faqs', 'about-me', 'contact-us'];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // If the top of the section is near the top of the viewport, set it as active
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check
+    handleScroll();
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Function to pass activeSection to NavigationHeader
+  const renderNavHeader = () => {
+    return <NavigationHeader activeSection={activeSection} />;
+  };
+  
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <>
       <div className="home">
-        <div className="section section-1" style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className={`nav-container ${showNav ? 'visible' : 'hidden'}`}>
+          {renderNavHeader()}
+        </div>
+        <div className="section section-transition" id="home" style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <h1 className="title is-1 has-text-centered mb-1 has-text-white brand">the feel coach</h1>
           <div className="section has-text-centered mt-3">
             <h1 className="title is-1 pt-6">Develop <br /> emotional <br /> stability</h1>
@@ -37,9 +93,9 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="section section-2">
-          <div className='container mt-6'>
-            <div className='columns'>
+        <div className="section section-transition" id="about">
+          <div className='container mt-3'>
+            <div className='columns is-vcentered'>
               <div className='column is-7'>
                 <h3 className='title is-3'>Open for deep feelers & empaths
                   who want to develop resilience.</h3>
@@ -52,8 +108,8 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className='section section-3'>
-          <div className='container'>
+        <div className="section section-transition" id="basics">
+          <div className='container mt-3'>
             <h2 className='title is-2'>Emotional Intelligence Basics</h2>
             <div className='columns is-space-between'>
               <div className='column is-6'>
@@ -72,11 +128,11 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="section section-4">
-          <div className='container'>
+        <div className="section section-transition" id="eq-journey">
+          <div className='container mt-3'>
             <h2 className="title is-2 mb-1 ">The EMOTION - FLOW journey</h2>
             <h2 className='title is-4 mb-1 '>Designed to get best results</h2>
-            <div className="container mt-6">
+            <div className="container mt-3">
               <div className='columns'>
                 <div className='column is-3'>
                   <div className="card"
@@ -170,10 +226,10 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="section section-5">
-          <div className='container'>
+        <div className="section section-transition" id="testimonials">
+          <div className='container mt-3'>
             <h2 className="title is-2 mb-1">Testimonials</h2>
-            <div className="container mt-6">
+            <div className="container mt-3">
               <div className="columns">
                 <div className="column is-4">
                   <TestimonialCard
@@ -201,11 +257,11 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="section section-6">
-          <div className="container">
+        <div className="section section-transition" id="faqs">
+          <div className="container mt-3">
             <h2 className="title is-2 mb-1">Frequently Asked Questions</h2>
           </div>
-          <div className='container mt-6'>
+          <div className='container mt-3'>
             <div className='columns'>
               <div className='column is-6'>
                 {Accordion(faq1.content)}
@@ -217,10 +273,10 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className='section section-7'>
-          <div className='container'>
+        <div className='section section-transition' id='about-me'>
+          <div className='container mt-3'>
             <h2 className='title is-2 mb-1'>About Me</h2>
-            <div className='container mt-6'>
+            <div className='container mt-3'>
               <div className='columns'>
                 <div className='column is-6'>
                   {AboutMe({
@@ -236,8 +292,8 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className='section section-8'>
-          <div className='container'>
+        <div className='section section-transition' id="contact-us">
+          <div className='container mt-3'>
             <div className="image-hero">
               <img src={sun} alt="Sun" className="hero-image" style={{ maxHeight: '20px' }} />
             </div>
@@ -260,6 +316,12 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {showScrollTop && (
+          <div className="scroll-to-top" onClick={scrollToTop}>
+            ↑
+          </div>
+        )}
       </div>
     </>
   );

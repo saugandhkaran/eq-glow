@@ -5,6 +5,47 @@
 @import "~bulma/bulma.sass";
 @import '_custom-bulma-variables';
 
+// Enable smooth scrolling for the entire site
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding-top: 1rem !important;
+}
+
+// Add a class for animated page transitions
+.section-transition {
+  transition: opacity 0.4s ease-in-out, transform 0.5s ease;
+  
+  &:target {
+    animation: fadeInSection 0.8s ease-out;
+  }
+  
+  &:not(:target) {
+    opacity: 0.95;
+  }
+}
+
+// Enhanced focus styles for better accessibility
+:focus {
+  outline: 3px solid rgba(107, 99, 255, 0.5);
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease-in-out;
+}
+
+// Custom focus style for links and buttons
+a:focus, button:focus {
+  text-decoration: none;
+  box-shadow: 0 0 0 3px rgba(107, 99, 255, 0.5);
+  outline: none;
+}
+
+@keyframes fadeInSection {
+  from { opacity: 0.5; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Domine", serif;
   font-optical-sizing: auto;
