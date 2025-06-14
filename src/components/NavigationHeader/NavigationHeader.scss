@@ -46,6 +46,16 @@
     }
   }
 
+  .navbar-end {
+    @media screen and (max-width: 1023px) {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      background-color: #00000099 !important;
+      backdrop-filter: blur(10px) !important;
+    }
+  }
+
   // Styling for menu items
   .navbar-item {
     font-family: "Domine", serif;
@@ -55,7 +65,7 @@
     
     &:hover {
       color: lighten($primary, 10%); // Change color on hover
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(123, 122, 122, 0.1);
     }
     
     // Animated underline for active item

@@ -42,19 +42,19 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ activeSection = 'ho
         behavior: 'smooth'
       });
     } else {
-      // redirect to the pageid '/{pageid}'
-      window.location.href = `/home?#${targetId}`;
+      // Use the React Router approach for navigation between pages
+      window.location.href = `/${targetId === 'home' ? '' : 'home'}#${targetId}`;
     }
   };
 
   return (
     <nav className={`navbar ${activationClass}`}>
       <div className="navbar-brand">
-        <a className={`navbar-item ${activeSection === 'home' ? 'is-active' : ''}`} 
-           href="/home" 
+        <Link style={{color: 'white'}} className={`navbar-item ${activeSection === 'home' ? 'is-active' : ''}`} 
+           to="/" 
            onClick={(e) => handleNavClick(e, 'home')}>
           <strong className='brand'>the feel coach</strong>
-        </a>
+        </Link>
         <span 
           className={`navbar-burger ${isActive ? 'is-active' : ''}`} 
           data-target="navbarMenu"
@@ -67,36 +67,36 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ activeSection = 'ho
       </div>
       <div id="navbarMenu" className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className="navbar-end">
-          <a href="#about" 
+          <Link to="/#about" 
              className={`navbar-item ${activeSection === 'about' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'about')}>
             About
-          </a>
-          <a href="#basics" 
+          </Link>
+          <Link to="/#basics" 
              className={`navbar-item ${activeSection === 'basics' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'basics')}>
             Basics
-          </a>
-          <a href="#eq-journey" 
+          </Link>
+          <Link to="/#eq-journey" 
              className={`navbar-item ${activeSection === 'eq-journey' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'eq-journey')}>
             Flow Journey
-          </a>
-          <a href="#faqs" 
+          </Link>
+          <Link to="/#faqs" 
              className={`navbar-item ${activeSection === 'faqs' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'faqs')}>
             FAQs
-          </a>
-          <a href="#about-me" 
+          </Link>
+          <Link to="/#about-me" 
              className={`navbar-item ${activeSection === 'about-me' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'about-me')}>
             About Me
-          </a>
-          <a href="#contact-us" 
+          </Link>
+          <Link to="/#contact-us" 
              className={`navbar-item ${activeSection === 'contact-us' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'contact-us')}>
             Contact
-          </a>
+          </Link>
           <Link to="/beta" className="navbar-item" onClick={closeMenu}>
             Beta
           </Link>

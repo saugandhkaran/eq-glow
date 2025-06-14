@@ -116,18 +116,18 @@ const Beta: React.FC = () => {
         <div className="container is-max-desktop mt-6 mb-6">
             <h2 className="title is-3 has-text-centered has-text-primary mb-6">What Is Asked Of You</h2>
             <div className="columns is-centered is-vcentered">
-              <div className="column has-text-centered">
-                <span className="icon has-text-white mb-6"><i className="fas fa-award fa-3x"></i></span>
+              <div className="column has-text-centered mb-6">
+                <span className="icon has-text-white mb-4"><i className="fas fa-award fa-3x"></i></span>
                 <p className="title is-5 has-text-white">Beta Price 500€</p>
                 <p className="subtitle is-6 has-text-white">for the first 5 clients.<br /><small>(Goes up to 1500€+)</small></p>
               </div>
-              <div className="column has-text-centered">
-                <span className="icon has-text-white mb-6"><i className="fas fa-comment-dots fa-3x"></i></span>
+              <div className="column has-text-centered mb-6">
+                <span className="icon has-text-white mb-4"><i className="fas fa-comment-dots fa-3x"></i></span>
                 <p className="title is-5 has-text-white">Feedback</p>
                 <p className="subtitle is-6 has-text-white">Help us improve by answering a post-course questionnaire.</p>
               </div>
-              <div className="column has-text-centered">
-                <span className="icon has-text-white mb-6"><i className="fas fa-star-half-alt fa-3x"></i></span>
+              <div className="column has-text-centered mb-6">
+                <span className="icon has-text-white mb-4"><i className="fas fa-star-half-alt fa-3x"></i></span>
                 <p className="title is-5 has-text-white">Testimonial</p>
                 <p className="subtitle is-6 has-text-white">Share your experience to feature on our future website.</p>
               </div>
