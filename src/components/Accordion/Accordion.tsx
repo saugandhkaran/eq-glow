@@ -15,7 +15,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, isActive,
         className={`accordion-header is-clickable is-flex is-justify-content-space-between is-align-items-center py-4 px-3`}
         onClick={onClick}
       >
-        <h3 className="title mb-0 is-5 has-text-white">{title}</h3>
+        <h3 className="title mb-0 pt-0 is-5 has-text-white">{title}</h3>
         <span className={`title is-4 has-text-white ${isActive ? "rotate-left" : "rotate-top"}`}>➤</span>
       </div>
       <div className={`accordion-content ${isActive ? "open" : ""}`}>

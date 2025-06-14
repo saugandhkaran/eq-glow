@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './NavigationHeader.scss';
 
 interface NavigationHeaderProps {
@@ -40,14 +41,17 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ activeSection = 'ho
         top: targetElement.offsetTop - 70, // Offset to account for the navbar height
         behavior: 'smooth'
       });
+    } else {
+      // redirect to the pageid '/{pageid}'
+      window.location.href = `/home?#${targetId}`;
     }
   };
 
   return (
-    <nav className={`navbar is-fixed-top ${activationClass}`}>
+    <nav className={`navbar ${activationClass}`}>
       <div className="navbar-brand">
         <a className={`navbar-item ${activeSection === 'home' ? 'is-active' : ''}`} 
-           href="#" 
+           href="/home" 
            onClick={(e) => handleNavClick(e, 'home')}>
           <strong className='brand'>the feel coach</strong>
         </a>
@@ -66,33 +70,36 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ activeSection = 'ho
           <a href="#about" 
              className={`navbar-item ${activeSection === 'about' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'about')}>
-            about
+            About
           </a>
           <a href="#basics" 
              className={`navbar-item ${activeSection === 'basics' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'basics')}>
-            basics
+            Basics
           </a>
           <a href="#eq-journey" 
              className={`navbar-item ${activeSection === 'eq-journey' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'eq-journey')}>
-            flow journey
+            Flow Journey
           </a>
           <a href="#faqs" 
              className={`navbar-item ${activeSection === 'faqs' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'faqs')}>
-            faqs
+            FAQs
           </a>
           <a href="#about-me" 
              className={`navbar-item ${activeSection === 'about-me' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'about-me')}>
-            about me
+            About Me
           </a>
           <a href="#contact-us" 
              className={`navbar-item ${activeSection === 'contact-us' ? 'is-active' : ''}`} 
              onClick={(e) => handleNavClick(e, 'contact-us')}>
-            contact
+            Contact
           </a>
+          <Link to="/beta" className="navbar-item" onClick={closeMenu}>
+            Beta
+          </Link>
         </div>
       </div>
     </nav>

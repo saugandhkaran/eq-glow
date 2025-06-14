@@ -74,3 +74,55 @@ p, button, ol, ul, li {
     font-family: "Kanit", sans-serif;
     font-weight: 800;
   }
+
+// Navigation container styles with animation
+.nav-container {
+  max-width: 1000px !important;
+  margin: 0 auto;
+  position: sticky;
+  margin-top: -61px;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease;
+  
+  &.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  &.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.has-text-primary {
+  color: $primary !important;
+}
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(107, 99, 255, 0.7);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+  
+  &:hover {
+    background-color: rgba(107, 99, 255, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}

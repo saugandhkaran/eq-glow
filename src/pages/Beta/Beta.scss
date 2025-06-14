@@ -1,0 +1,105 @@
+@import "../../styles/_global.scss";
+
+.beta {
+  max-width: 1000px !important;
+  margin: 0 auto;
+  .hero {
+    min-height: 100vh;
+    background: #BA5370;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #F4E2D8, #BA5370);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #F4E2D8, #BA5370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .is-this-course-for-you {
+    background: linear-gradient(to bottom, #BA5370, #F4E2D8);
+    h1 {
+      color: $primary;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    p {
+      color: $white;
+      font-size: 1.2rem;
+    }
+    .box {
+      border-radius: 10px;
+      background-color: #27749a5b;
+      padding: 10px 60px;
+      color: white;
+    }
+  }
+  .taste-of-core-transformation {
+    background: linear-gradient(to bottom, #F4E2D8, #82D8CA);
+    h1 {
+      color: $primary;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    p {
+      color: $white;
+      font-size: 1.2rem;
+    }
+    .box {
+      border-radius: 10px;
+      background-color: #27749a5b;
+      padding: 10px 60px;
+      color: white;
+    }
+  }
+  .beta-offer-details {
+    background: linear-gradient(to bottom, #82D8CA, #F4E2D8);
+    h1 {
+      color: $primary;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    p {
+      color: $white;
+      font-size: 1.2rem;
+    }
+    .box {
+      border-radius: 10px;
+      background-color: #27749a5b;
+      padding: 10px 60px;
+      color: white;
+    }
+  }
+  .what-is-asked-of-you {
+    background: linear-gradient(to bottom, #F4E2D8, #BA5370);
+    h1 {
+      color: $primary;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    p {
+      color: $white;
+      font-size: 1.2rem;
+    }
+    .box {
+      border-radius: 10px;
+      background-color: #27749a5b;
+      padding: 10px 60px;
+      color: white;
+    }
+  }
+  footer {
+    background-color: $primary;
+    .container{
+      color: white;
+      padding: 20px;
+    }
+    button {
+      background-color: $white !important;
+      color: $primary !important;
+      border: transparent;
+      &:hover {
+        background-color: darken($white, 10%);
+        color: $primary;
+      }
+    }
+  }
+}
+
+// Photo by <a href="https://unsplash.com/@joshcala?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Josh Calabrese</a> on <a href="https://unsplash.com/photos/person-holding-eyeglasses-qmnpqDwla_E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+// Photo by <a href="https://unsplash.com/@ianstauffer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ian Stauffer</a> on <a href="https://unsplash.com/photos/man-sitting-on-mountain-cliff-facing-white-clouds-rising-one-hand-at-golden-hour-bH7kZ0yazB0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
+      
