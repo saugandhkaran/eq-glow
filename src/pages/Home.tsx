@@ -33,7 +33,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <p className='is-size-7'>Photo by <a href="https://unsplash.com/@jblesly?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lesly Juarez</a> on <a href="https://unsplash.com/photos/long-black-haired-woman-smiling-close-up-photography-1AhGNGKuhR0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-      </p>
+            </p>
           </div>
         </div>
 
@@ -47,6 +47,45 @@ const Home: React.FC = () => {
               <div className='column is-3'></div>
               <div className='column is-2'>
                 <button className='button is-medium' >I am ready</button>
+              </div>
+            </div>
+            <h3 className='title is-3 mt-5'>Do you suffer from:</h3>
+            <div className="container mt-6 mb-6">
+              <div className="columns is-desktop is-variable is-5">
+                <div className="column">
+                  <div className="box has-text-centered p-5">
+                    <span className="icon is-large has-text-primary mb-4"><i className="fas fa-heart fa-3x"></i></span>
+                    <p className="title is-4">Overwhelming feelings</p>
+                    <ul>
+                      <li className="pb-2">You don’t know how to deal with intense emotions,  you experience outbursts, sudden anxiety/crying and feel full/empty inside</li>
+                      <li className="pt-2 pb-2">You feel overwhelmed by your surrounding and long for internal grounding & strength</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="column">
+                  <div className="box has-text-centered p-5">
+                    <span className="icon is-large has-text-primary mb-4"><i className="fas fa-bullseye fa-3x"></i></span>
+                    <p className="title is-4">A specific painful emotion</p>
+                    <ul>
+                      <li className="pb-2">
+                        You recognize a very specific uncomfortable emotion that shows up frequently (for example anxiety, sadness or anger
+                      </li>
+                      <li className='pt-2 pb-2'>
+                        You notice how the emotion negatively affects your everyday life and your relationships
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="column">
+                  <div className="box has-text-centered p-5">
+                    <span className="icon is-large has-text-primary mb-4"><i className="fas fa-flag-checkered fa-3x"></i></span>
+                    <p className="title is-4">A missing plan</p>
+                    <ul>
+                      <li className="pb-2">You know WHAT you want to change (a pattern or trigger) but don’t know HOW</li>
+                      <li className='pt-2 pb-2'>You are sick of experiencing the same situation over and over again and want to take a bold step to change yourself</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -79,93 +118,59 @@ const Home: React.FC = () => {
             <div className="container mt-3">
               <div className='columns'>
                 <div className='column is-3'>
-                  <div className="card"
+                  <div className="card eq-foundation"
                     style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
                     <div className="card-content">
                       <h5 className="title is-5">EQ <br />FEEL RESET <br /><p className='tag is-info is-light has-text-weight-semibold'>2 Weeks</p></h5>
                       <div>
-                        <p className='has-text-black p-1 features features'>Learn the basics of emotional awareness</p>
-                        <p className='has-text-black p-1 features'>Get to know your life patterns & triggers</p>
-                        <p className='has-text-black p-1 features'>Clarify goals, circumstances and necessary steps</p>
+                        <p className='has-text-black p-1 features features'>learn the basics of mental & emotional awareness</p>
+                        <p className='has-text-black p-1 features'>discover your personal patterns & triggers</p>
+                        <p className='has-text-black p-1 features'>clarify your goal, circumstances and necessary stepss</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className='column is-3'>
-                  <div className="card"
+                  <div className="card eq-foundation"
                     style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
                     <div className="card-content">
                       <h5 className="title is-5">EQ <br />FOUNDATIONS <br /><p className='tag is-info is-light has-text-weight-semibold'>2 Weeks</p></h5>
                       <div>
                         <p className='has-text-black p-1 features'>Feel Reset +</p>
-                        <p className='has-text-black p-1 features'>Build strong mental & emotional foundations</p>
+                        <p className='has-text-black p-1 features'>build strong mental & emotional foundations</p>
                         <p className='has-text-black p-1 features'>learn techniques to increase emotional stability (grounding, mindfulness, self regulation, reflection)</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className='column is-3'>
-                  <div className="card"
+                  <div className="card eq-flow"
                     style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
                     <div className="card-content">
                       <h5 className="title is-5">EQ <br />SHIFT<br /><p className='tag is-info is-light has-text-weight-semibold'>2 Weeks</p></h5>
                       <div>
-                        <p className='has-text-black p-1 features'>Feel Reset + Foundations</p>
-                        <p className='has-text-black p-1 features'>Transformative EQ sessions</p>
-                        <p className='has-text-black p-1 features'>Mindset work</p>
-                        <p className='has-text-black p-1 features'>Deepen the basics</p>
-                        <p className='has-text-black p-1 features'>Learn advanced EQ.glow techniques (behaviour change, old pattern transformation, stabilisation techniques)</p>
+                        <p className='has-text-black p-1 features'>Feel Foundations +</p>
+                        <p className='has-text-black p-1 features'>deepen the basics</p>
+                        <p className='has-text-black p-1 features'>learn advanced techniques (behaviour change, emotional transformation, stabilisation techniques) </p>
+
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className='column is-3'>
-                  <div className="card"
+                  <div className="card eq-flow"
                     style={{ backgroundImage: `url(${sun})`, backgroundPosition: 'top right', backgroundSize: '100px 100px', backgroundRepeat: 'no-repeat' }}>
                     <div className="card-content">
                       <h5 className="title is-5">EQ <br />INTEGRATION<br /><p className='tag is-info is-light has-text-weight-semibold'>2 Weeks</p></h5>
                       <div>
                         <p className='has-text-black p-1 features'>Feel Reset Included</p>
-                        <p className='has-text-black p-1 features'>Learn the basics of emotional awareness</p>
-                        <p className='has-text-black p-1 features'>Learn the basics of emotional awareness</p>
+                        <p className='has-text-black p-1 features'>master integrating the learned tools into your daily life </p>
+                        <p className='has-text-black p-1 features'>train real-life challenges to cement mastery and ensure lasting change.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* EQ Reset Timeline */}
-            <div className="columns mt-6 eq-reset-timeline">
-              <div className="column is-3 timeline">
-              </div>
-              <div className="column is-3 timeline">
-              </div>
-            </div>
-            <div className="columns">
-              <div className="column is-3"> <p>EQ Reset</p>
-              </div>
-
-
-
-
-            </div>
-
-            {/* EW Glow Timeline */}
-            <div className="columns eq-glow-timeline">
-              <div className="column is-3 timeline">
-              </div>
-              <div className="column is-3 timeline">
-              </div>
-              <div className="column is-3 timeline">
-              </div>
-              <div className="column is-3 timeline">
-              </div>
-            </div>
-            <div className="columns">
-              <div className="column is-3"> <p>EQ Glow</p>
-              </div>
-
             </div>
           </div>
         </div>
@@ -249,11 +254,11 @@ const Home: React.FC = () => {
               </div>
               <div className='columns p-5'>
                 <div className='column is-6'>
-                  <p>Location: online & in person <br/>
+                  <p>Location: online & in person <br />
                     (I’m currently in Berlin, Germany)</p>
                 </div>
                 <div className='column is-6'>
-                  <p>Contact me directly: <br/>
+                  <p>Contact me directly: <br />
                     emotion.soeller@gmail.com</p>
                 </div>
               </div>
@@ -261,7 +266,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        
+
       </div>
     </>
   );

@@ -28,6 +28,17 @@
     color: $white;
     min-height: 100vh;
     background-image: linear-gradient(to bottom, #8989ff5e, #eb5f7b79), url(https://grainy-gradients.vercel.app/noise.svg);
+    .box {
+      border-radius: 10px;
+      background-color: #27749a5b;
+      padding: 10px 60px;
+      color: white;
+    }
+    ul {
+      li {
+        border-bottom: 1px solid $primary;
+      }
+    }
     h1 {
       color: #7c283b;
     }
@@ -67,6 +78,12 @@
       .features {
         border-bottom: 1px solid $primary;
       }
+    }
+    .eq-foundation {
+      border-left: 4px solid #8989ff;
+    }
+    .eq-flow {
+      border-left: 4px solid #f5a87b;
     }
   }
 
