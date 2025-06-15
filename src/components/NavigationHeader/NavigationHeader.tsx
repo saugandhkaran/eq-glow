@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './NavigationHeader.scss';
 
 interface NavigationHeaderProps {
@@ -10,6 +10,8 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ activeSection = 'ho
   const [isActive, setIsActive] = useState(false);
   const prevActiveSectionRef = useRef(activeSection);
   const [activationClass, setActivationClass] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Effect for section change animation
   useEffect(() => {
@@ -35,15 +37,25 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({ activeSection = 'ho
     e.preventDefault();
     closeMenu();
     
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop - 70, // Offset to account for the navbar height
-        behavior: 'smooth'
-      });
+    // Check if we're on the home page
+    const isHomePage = location.pathname === '/' || location.pathname === '/home';
+    
+    if (isHomePage) {
+      // We're on the home page, try to find the element and scroll to it
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70, // Offset for navbar
+          behavior: 'smooth'
+        });
+      }
     } else {
-      // Use the React Router approach for navigation between pages
-      window.location.href = `/${targetId === 'home' ? '' : 'home'}#${targetId}`;
+      // We're not on the home page, navigate to home with hash
+      if (targetId === 'home') {
+        navigate('/');
+      } else {
+        navigate(`/#${targetId}`, { replace: true });
+      }
     }
   };
 

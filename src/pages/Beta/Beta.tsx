@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Beta.scss';
 import BetaImage from '../../assets/images/beta_image.jpg';
 import { ShieldCheck, BrainCircuit, HeartHandshake, Sparkles, Target, Award, MessageSquare, UserCheck, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Beta: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Check if we need to navigate back to home with a hash
+  useEffect(() => {
+    // If there's a hash in the URL like /#faqs
+    if (location.hash) {
+      // Navigate to home page with the hash
+      navigate('/' + location.hash, { replace: true });
+    }
+  }, [location, navigate]);
 
   return (
     <div className="beta">

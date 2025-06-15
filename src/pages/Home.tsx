@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Home.scss';
 import sun from '../assets/images/sun.png';
 import { TestimonialCard } from '../components/TestimonialCard/TestimonialCard';
@@ -14,6 +15,43 @@ import * as faq2 from '../assets/content/faq-2.json';
 import { AboutMe } from '../components/AboutMe/AboutMe';
 
 const Home: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Function to scroll to section based on hash
+    const scrollToSection = () => {
+      if (location.hash) {
+        // Remove the # character
+        const targetId = location.hash.substring(1);
+        
+        // Find the element with that ID
+        const targetElement = document.getElementById(targetId);
+        
+        // If element exists, scroll to it
+        if (targetElement) {
+          // Short delay to ensure the page is fully loaded
+          setTimeout(() => {
+            window.scrollTo({
+              top: targetElement.offsetTop - 70, // Offset for navbar
+              behavior: 'smooth'
+            });
+          }, 300); // Increased timeout for better reliability
+        }
+      }
+    };
+
+    // Call the function
+    scrollToSection();
+
+    // Also add a listener for hash changes
+    window.addEventListener('hashchange', scrollToSection);
+    
+    // Clean up
+    return () => {
+      window.removeEventListener('hashchange', scrollToSection);
+    };
+  }, [location.hash]);
+
   return (
     <>
       <div className="home">
