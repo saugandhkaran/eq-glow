@@ -55,7 +55,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="home">
-        <div className="section section-transition" id="home" style={{ backgroundImage: `url(${HeroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="section section-transition" id="home">
           <h1 className="title is-1 has-text-centered mb-1 has-text-white brand">the feel coach</h1>
           <div className="section has-text-centered mt-3">
             <h1 className="title is-1 pt-6">Develop <br /> emotional <br /> stability</h1>
@@ -70,8 +70,6 @@ const Home: React.FC = () => {
                 </p>
               </div>
             </div>
-            <p className='is-size-7'>Photo by <a href="https://unsplash.com/@jblesly?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lesly Juarez</a> on <a href="https://unsplash.com/photos/long-black-haired-woman-smiling-close-up-photography-1AhGNGKuhR0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-            </p>
           </div>
         </div>
 
@@ -153,6 +151,10 @@ const Home: React.FC = () => {
           <div className='container mt-3'>
             <h2 className="title is-2 mb-1 ">The EMOTION - FLOW journey</h2>
             <h2 className='title is-4 mb-1 '>Designed to get best results</h2>
+            <div className='container mt-3 columns'>
+              <p className='has-text-weight-semibold has-text-black border-left pl-3 pr-3 journey-label-1'>Feel Foundation: Build emotional awareness</p>
+              <p className='has-text-weight-semibold has-text-black border-left pl-3 pr-3 journey-label-2'>Feel Shift: Emotional Deep Dive</p>  
+            </div>
             <div className="container mt-3">
               <div className='columns'>
                 <div className='column is-3'>
